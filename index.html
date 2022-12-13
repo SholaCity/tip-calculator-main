@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="input" id="input-section">
+        <div class="bill-wrap">
+          <div class="label">
+            <label for="#bill">Bill</label>
+            <p class="error-message">"invalid input"</p>
+          </div>
+          <input type="number" id="bill" class="bill" value="1" placeholder="$0">
+        </div>
+
+
+        <div class="percentages">
+          <div class="label ">
+            <p>Select Tip (%)</p>
+            <p class="error-message">"select one input only"</p>
+          </div>
+          <div class="input-percent">
+            <input value="5" type="radio" name="valueGroup" id="5%-label">
+            <label value="5" class="btn-percent percent btn" for="5%-label">5%</label>
+
+            <input value="10" type="radio" name="valueGroup" id="10%-label">
+            <label value="10" class="btn-percent percent btn" for="10%-label">10%</label>
+
+            <input value="15" type="radio" name="valueGroup" id="15%-label">
+            <label value="15" class="btn-percent percent btn" for="15%-label">15%</label>
+
+            <input value="25" type="radio" name="valueGroup" id="25%-label">
+            <label value="25" class="btn-percent percent btn" for="25%-label">25%</label>
+
+            <input value="50" type="radio" name="valueGroup" id="50%-label">
+            <label value="50" class="btn-percent percent btn" for="50%-label">50%</label>
+
+            <input type="number" class="btn-percent custom btn" placeholder="custom">
+          </div>
+        </div>
+
+        <div class="num-of-people-wrap">
+          <div class="label">
+            <label for="#num-of-people"> Number of People</label>
+            <p class="error-message">"can't be zero"</p>
+          </div>
+          <input value="0" type="number" id="num-of-people" class="num-of-people" placeholder="0">
+        </div>
+      </div>
+      <div class=" result">
+        <div class=" result-wrap">
+          <div class="tip-amount item">
+            <div class="head">
+              <div class="label"> Tip Amount</div>
+              <div class="unit"> / person</div>
+            </div>
+            <p class="tip-amount-result result">$0.00</p>
+          </div>
+          <div class="total-amount item">
+            <div class="head">
+              <div class="label"> Total</div>
+              <div class="unit"> / person</div>
+            </div>
+            <p class="total-amount-result result">$0.00</p>
+          </div>
+        </div>
+        <div class="result-btn-wrap">
+          <button type="reset" class="reset-btn" form="">C</button>
+          <button class="calc-btn">calculate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
